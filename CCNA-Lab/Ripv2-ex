@@ -1,0 +1,286 @@
+en
+conf t
+hostname R1
+int f1/0
+ip add 192.168.1.1 255.255.255.0
+no sh
+
+int f0/0
+ip add 80.1.1.1 255.0.0.0
+no sh
+
+int f0/1
+ip add 10.1.1.1 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 192.168.1.0
+network 10.0.0.0
+network 80.0.0.0
+__________________________________________________________
+
+en
+conf t
+hostname R2
+
+int f0/1
+ip add 20.1.1.1 255.0.0.0
+no sh
+
+int f0/0
+ip add 10.1.1.2 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 10.0.0.0
+network 20.0.0.0
+__________________________________________________________
+
+
+en
+conf t
+hostname R3
+
+int f0/0
+ip add 20.1.1.2 255.0.0.0
+no sh
+
+int f0/1
+ip add 30.1.1.2 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 30.0.0.0
+network 20.0.0.0
+
+------------------------------------------------------------
+en
+conf t
+hostname R4
+
+int f1/0
+ip add 192.168.2.1 255.255.255.0
+no sh
+
+int f0/1
+ip add 30.1.1.2 255.0.0.0
+no sh
+
+int f0/0
+ip add 40.1.1.2 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 192.168.2.0
+network 40.0.0.0
+network 30.0.0.0
+
+__________________________________________________________
+
+en
+conf t
+hostname R5
+
+int f0/1
+ip add 40.1.1.1 255.0.0.0
+no sh
+
+int f0/0
+ip add 50.1.1.2 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 40.0.0.0
+network 50.0.0.0
+
+_------------------------------------------------------------------------
+
+en
+conf t
+hostname R6
+
+int f0/1
+ip add 50.1.1.1 255.0.0.0
+no sh
+
+int f0/0
+ip add 60.1.1.2 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 60.0.0.0
+network 50.0.0.0
+------------------------------------------------------------------
+
+en
+conf t
+hostname R7
+
+int f0/1
+ip add 60.1.1.1 255.0.0.0
+no sh
+
+int f0/0
+ip add 70.1.1.2 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 60.0.0.0
+network 70.0.0.0
+
+
+---------------------------------------
+
+en
+conf t
+hostname R8
+
+int f0/1
+ip add 70.1.1.1 255.0.0.0
+no sh
+
+int f0/0
+ip add 80.1.1.2 255.0.0.0
+no sh
+
+router rip
+version 2
+no auto-summary
+network 80.0.0.0
+network 70.0.0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+en
+conf t
+hostname R1
+int f0/1
+ip add 12.1.1.1 255.0.0.0
+no sh
+
+int f1/0
+ip add 15.1.1.1 255.0.0.0
+no sh
+
+int f0/0
+ip add 192.168.1.1 255.255.255.0
+no sh
+
+router rip
+version 2
+network 12.0.0.0
+network 15.0.0.0
+network 192.168.1.0
+
+___________________________________________________
+
+en
+conf t
+hostname R2
+int f0/0
+ip add 12.1.1.2 255.0.0.0
+no sh
+
+int f0/1
+ip add 30.1.1.1 255.0.0.0
+no sh
+
+
+
+router rip
+version 2
+no auto-summary
+network 12.0.0.0
+network 30.0.0.0
+
+_____________________________________________________
+
+en
+conf t
+hostname R3
+int f0/0
+ip add 12.1.1.1 255.0.0.0
+no sh
+
+int f0/1
+ip add 30.1.1.2 255.0.0.0
+no sh
+
+
+
+router rip
+version 2
+no auto-summary
+network 21.0.0.0
+network 30.0.0.0
+
+___________________________
+
+en
+conf t
+hostname R4
+int f0/0
+ip add 192.168.2.1 255.255.255.0
+no sh
+
+int f0/1
+ip add 21.1.1.2 255.0.0.0
+no sh
+
+int f1/0
+ip add 54.1.1.2 255.0.0.0
+no sh
+
+
+
+router rip
+version 2
+no auto-summary
+network 21.0.0.0
+network 54.0.0.0
+network 192.168.2.0
+
+__________________________________________-
+
+en
+conf t
+hostname R5
+int f0/0
+ip add 54.1.1.1 255.0.0.0
+no sh
+
+int f0/1
+ip add 15.1.1.2 255.0.0.0
+no sh
+
+
+
+router rip
+version 2
+no auto-summary
+network 54.0.0.0
+network 15.0.0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
