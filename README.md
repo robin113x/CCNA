@@ -1,12 +1,20 @@
 Exam Description: CCNA Exam v1.0 (CCNA 200-301) is a 120-minute exam associated with the CCNA
+
+
 certification. This exam tests a candidate's knowledge and skills related to network fundamentals,
 network access, IP connectivity, IP services, security fundamentals, and automation and
 programmability. The course, Implementing and Administering Cisco Solutions (CCNA), helps candidates
 prepare for this exam.
+
+
+
 The following topics are general guidelines for the content likely to be included on the exam. However,
 other related topics may also appear on any specific delivery of the exam. To better reflect the contents
 of the exam and for clarity purposes, the guidelines below may change at any time without notice.
 20%
+
+
+
 1.0
 1.1 Network Fundamentals
 Explain the role and function of network components
@@ -32,7 +40,14 @@ Explain the role and function of network components
 1.5 Compare TCP to UDP
 1.6 Configure and verify IPv4 addressing and subnetting
 1.7 Describe the need for private IPv4 addressing
+
+
+
 2019 Cisco Systems, Inc. This document is Cisco Public.
+
+
+
+
 Page 120%
 1.8 Configure and verify IPv6 addressing and prefix
 1.9 Compare IPv6 address types
