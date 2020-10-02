@@ -1,0 +1,87 @@
+en
+conf t
+hostname R1
+int f0/1
+ip add 192.168.1.1 255.255.255.0
+no sh
+
+ip dhcp pool abx
+default-router 192.168.1.1
+network 192.168.1.0 255.255.255.0
+
+int f0/0
+ip add 10.1.1.1 255.0.0.0
+no sh
+
+router ospf 1
+network 10.0.0.0 0.255.255.255 area 1
+network 192.168.1.0 0.0.0.255  area 1
+
+
+____________________________________________________________
+
+en 
+conf t
+hostname R2
+int f0/0
+ip add 10.1.1.2 255.0.0.0
+no sh
+
+int f0/1
+ip add 20.1.1.1 255.0.0.0
+no sh
+router ospf 1
+network 10.0.0.0 0.255.255.255 area 1
+network 20.0.0.0 0.255.255.255 area 0
+
+_______________________________________________________________
+
+en 
+conf t
+hostname R3
+int f0/0
+ip add 30.1.1.1 255.0.0.0
+no sh
+
+int f0/1
+ip add 20.1.1.2 255.0.0.0
+no sh
+
+router ospf 1
+network 30.0.0.0 0.255.255.255 area 2
+network 20.0.0.0 0.255.255.255 area 0
+
+________________________________________________________________
+
+
+en
+conf t
+hostname R4
+int f0/1
+ip add 192.168.2.1 255.255.255.0
+no sh
+
+ip dhcp pool abxc
+default-router 192.168.2.1
+network 192.168.2.0 255.255.255.0
+
+int f0/0
+ip add 30.1.1.2 255.0.0.0
+no sh
+
+router ospf 1
+network 30.0.0.0 0.255.255.255 area 2
+network 192.168.2.0 0.0.0.255  area 2
+
+
+
+
+
+
+
+
+
+
+
+
+
