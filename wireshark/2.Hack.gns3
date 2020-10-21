@@ -1,0 +1,251 @@
+{
+    "auto_close": true,
+    "auto_open": false,
+    "auto_start": false,
+    "drawing_grid_size": 25,
+    "grid_size": 75,
+    "name": "2.Hack",
+    "project_id": "7e0d28c8-e256-41f6-aafb-3b9628ed0f95",
+    "revision": 9,
+    "scene_height": 1000,
+    "scene_width": 2000,
+    "show_grid": true,
+    "show_interface_labels": true,
+    "show_layers": false,
+    "snap_to_grid": false,
+    "supplier": null,
+    "topology": {
+        "computes": [],
+        "drawings": [
+            {
+                "drawing_id": "451b29dc-d024-4e87-8c20-3e608a058c20",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"191\" height=\"161\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">en\nconfig terminal\nhostname R1\nenable password cisco\n\nint f0/0\nip add 10.1.1.1 255.0.0.0\nno sh\n</text></svg>",
+                "x": -761,
+                "y": -384,
+                "z": 2
+            },
+            {
+                "drawing_id": "1b044c60-7333-4852-9fda-fdcc0978f1e8",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"191\" height=\"161\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">en\nconfig terminal\nhostname R2\nenable password cisco\n\nint f0/0\nip add 10.1.1.2 255.0.0.0\nno sh\n</text></svg>",
+                "x": 220,
+                "y": -421,
+                "z": 2
+            },
+            {
+                "drawing_id": "263fae5a-b493-44db-b810-2fa4898a6f5f",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"254\" height=\"127\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">ip domain-name Robin\ncrypto key generate rsa\nip ssh version 2\nline vty 0 4\ntransport input ssh\nlogin local\nusername admin password admin</text></svg>",
+                "x": 274,
+                "y": -158,
+                "z": 2
+            },
+            {
+                "drawing_id": "abd01831-7e5e-4329-85e9-a11de113ea8b",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"200\" height=\"159\"><rect width=\"200\" height=\"159\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
+                "x": -765,
+                "y": -392,
+                "z": 1
+            },
+            {
+                "drawing_id": "17a270a4-b3f2-4f24-8c72-69f01b56a217",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"200\" height=\"156\"><rect width=\"200\" height=\"156\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
+                "x": 217,
+                "y": -422,
+                "z": 1
+            },
+            {
+                "drawing_id": "6d19bfab-cd93-45e6-a39f-cd687d6a0bdb",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"119\" height=\"59\"><text font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\" fill=\"#000000\" fill-opacity=\"1.0\">line vty 0 4\npassword cisco\nlogin</text></svg>",
+                "x": -457,
+                "y": -81,
+                "z": 2
+            },
+            {
+                "drawing_id": "6131b964-d082-4cb3-b697-98160f2fc7ca",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"140\" height=\"100\"><rect width=\"140\" height=\"100\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
+                "x": -463,
+                "y": -100,
+                "z": 1
+            },
+            {
+                "drawing_id": "3ee3b217-2d9a-4961-a1b9-90f158e71ae2",
+                "locked": false,
+                "rotation": 0,
+                "svg": "<svg width=\"265\" height=\"147\"><rect width=\"265\" height=\"147\" fill=\"#ffffff\" fill-opacity=\"1.0\" stroke-width=\"2\" stroke=\"#000000\" /></svg>",
+                "x": 272,
+                "y": -163,
+                "z": 1
+            }
+        ],
+        "links": [
+            {
+                "filters": {},
+                "link_id": "4a964e04-0cd6-47bc-aeb6-9c5deb79be28",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f0/0",
+                            "x": 72,
+                            "y": 21
+                        },
+                        "node_id": "cf966265-f280-43c5-a140-7d9600fa43f1",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f0/0",
+                            "x": -34,
+                            "y": 28
+                        },
+                        "node_id": "4896fabf-7239-4397-8f2a-767be3b52fa0",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            }
+        ],
+        "nodes": [
+            {
+                "compute_id": "vm",
+                "console": 5000,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "R1",
+                    "x": 19,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "R1",
+                "node_id": "cf966265-f280-43c5-a140-7d9600fa43f1",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": false,
+                    "aux": null,
+                    "clock_divisor": 8,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "dynamips_id": 1,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x60aa311c",
+                    "idlesleep": 30,
+                    "image": "c3745-adventerprisek9-mz.124-25d.image",
+                    "image_md5sum": "563797308a3036337c3dee9b4ab54649",
+                    "iomem": 5,
+                    "mac_addr": "c401.05a6.0000",
+                    "mmap": true,
+                    "nvram": 256,
+                    "platform": "c3745",
+                    "ram": 256,
+                    "slot0": "GT96100-FE",
+                    "slot1": "NM-1FE-TX",
+                    "slot2": "NM-4T",
+                    "slot3": null,
+                    "slot4": null,
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY",
+                    "usage": "",
+                    "wic0": "WIC-1T",
+                    "wic1": "WIC-1T",
+                    "wic2": "WIC-1T"
+                },
+                "symbol": ":/symbols/classic/router.svg",
+                "template_id": "1c55a40d-650d-457e-9cd0-38c366d01d71",
+                "width": 66,
+                "x": -470,
+                "y": -288,
+                "z": 1
+            },
+            {
+                "compute_id": "vm",
+                "console": 5003,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 45,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "R4",
+                    "x": 19,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "R4",
+                "node_id": "4896fabf-7239-4397-8f2a-767be3b52fa0",
+                "node_type": "dynamips",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "auto_delete_disks": false,
+                    "aux": null,
+                    "clock_divisor": 8,
+                    "disk0": 0,
+                    "disk1": 0,
+                    "dynamips_id": 4,
+                    "exec_area": 64,
+                    "idlemax": 500,
+                    "idlepc": "0x60aa311c",
+                    "idlesleep": 30,
+                    "image": "c3745-adventerprisek9-mz.124-25d.image",
+                    "image_md5sum": "563797308a3036337c3dee9b4ab54649",
+                    "iomem": 5,
+                    "mac_addr": "c404.05b5.0000",
+                    "mmap": true,
+                    "nvram": 256,
+                    "platform": "c3745",
+                    "ram": 256,
+                    "slot0": "GT96100-FE",
+                    "slot1": "NM-1FE-TX",
+                    "slot2": "NM-4T",
+                    "slot3": null,
+                    "slot4": null,
+                    "sparsemem": true,
+                    "system_id": "FTX0945W0MY",
+                    "usage": "",
+                    "wic0": "WIC-1T",
+                    "wic1": "WIC-1T",
+                    "wic2": "WIC-1T"
+                },
+                "symbol": ":/symbols/classic/router.svg",
+                "template_id": "1c55a40d-650d-457e-9cd0-38c366d01d71",
+                "width": 66,
+                "x": 81,
+                "y": -294,
+                "z": 1
+            }
+        ]
+    },
+    "type": "topology",
+    "variables": null,
+    "version": "2.2.15",
+    "zoom": 100
+}
